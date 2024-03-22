@@ -1,32 +1,38 @@
 <?php
 
-require_once realpath('./vendor/autoload.php');
-$dotenv = Dotenv\Dotenv::createImmutable('./');
-$dotenv->load();
+    use controller\Persona;
+    require_once realpath('./vendor/autoload.php');
+    
+    use config\Rutes;
+    Rutes::vista();    
 
-echo $_ENV['mi_variable_de_entorno'];
-echo "<br>";
-echo $_ENV['DB_CONNECTION'];
-echo "<br>";
-echo $_ENV['DB_HOST'];
-echo "<br>";
-echo $_ENV['DB_DATABASE'];
-echo "<br>";
-echo $_ENV['DB_USERNAME'];
-echo "<br>";
-echo $_ENV['DB_PASSWORD'];
+    
+    // echo print_r(Persona::avg_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::sum_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::min_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::max_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::like_datos());
+    // echo print_r("<br>");
+    //echo print_r(Persona::actualizar_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::obtener_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::limitar_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::contar_datos());
+    // echo print_r("<br>");
+    //echo print_r(Persona::eliminar_datos());
+    // echo print_r("<br>");
+    // echo print_r(Persona::insertar_datos());
+    // echo print_r("<br>");
+    // Pedido::insertar_datos();
+    //probar que todo funcione bien 
+//bolber dinamico el select
+//crar tres tablas mas y tres conroladores y sus funciones 
 
-
-$host = $_ENV['DB_HOST'];
-$database = $_ENV['DB_DATABASE'];
-$username = $_ENV['DB_USERNAME'];
-$password = $_ENV['DB_PASSWORD'];
-
-$conexion = mysqli_connect($host, $username, $password, $database);
-
-if ($conexion) {
-    echo "Conexión exitosa";   
-}else{
-    die("Error de conexión");
-}
+//hacer un conut 
 ?>

@@ -4,7 +4,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Back\\Practica1\\": "app/"
+            "Back\\Practica1\\": "app/",
+            "config\\": "app/config/",
+            "controller\\": "app/controller/",
+            "model\\": "app/model/"
         }
     },
     "authors": [
