@@ -11,7 +11,7 @@
         }
         public static function insertar_datos(){
             $productos = new TablaProductos;
-            echo json_encode($productos->insercion(['nombre'=>'papas', 'descripcion'=>'bolsa con aire', 'precio'=>15,] ));
+            echo json_encode($productos->insercion(['nombre'=>'papas', 'descripcion'=>'bolsa con aire', 'precio'=>15,]));
         }
         public static function limitar_datos(){
             $productos = new TablaProductos;
@@ -21,13 +21,17 @@
             $productos = new TablaProductos;
             return $productos->limit(20)->all();
         }
+        public static function unproducto_datos(){
+            $productos = new TablaProductos;
+            return $productos->limit('1')->all();
+        }
         public static function obtener_datos() {
             $productos = new TablaProductos;
             return $productos->consulta()->where('nombre','papas')->first();
         }
         public static function eliminar_datos(){
             $productos = new TablaProductos;
-            return $productos->eliminar()->where('id_productos','1')->get();
+            return $productos->eliminar()->where('id_productos','6')->get();
         }
     };
 

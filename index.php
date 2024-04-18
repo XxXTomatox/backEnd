@@ -7,6 +7,8 @@
     use config\Rutes;
     // Rutes::vista();    
     // echo print_r(Productos::insertar_datos());
+    echo print_r("<br>");
+    echo print_r("<br>");
     echo print_r(Productos::contar_datos());
     echo print_r("<br>");
     echo print_r("<br>");
@@ -19,7 +21,10 @@
     echo print_r(Productos::obtener_datos());
     echo print_r("<br>");
     echo print_r("<br>");
-    // echo print_r(Productos::eliminar_datos());
+    echo print_r(Productos::unproducto_datos());
+    echo print_r("<br>");
+    echo print_r("<br>");
+     echo print_r(Productos::eliminar_datos());
 
     // echo print_r(Persona::avg_datos());
     // echo print_r("<br>");
