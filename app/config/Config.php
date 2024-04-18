@@ -5,7 +5,7 @@
     class Dependencia{
         public static function Rutas_home(){
             define('SERVER','backend.local');
-            define('DEP_IMG',SERVER."public/ing/");
+            define('DEP_IMG',SERVER."public/img/");
             define('DEP_JS',SERVER."public/js/");
             define('DEP_CSS',SERVER."public/css/");
 

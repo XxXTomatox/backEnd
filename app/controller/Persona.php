@@ -40,7 +40,7 @@
         }
         public static function insertar_datos(){
             $persona = new TablaPersona();
-            echo json_encode($persona->insercion(['nombre'=>'pollo','apellido'=>'code','email'=>'pollo_code@gmail.com']));
+            echo json_encode($persona->insercion(['nombre'=>'karen','apellido'=>'herrera','email'=>'karen@gmail.com']));
         }
         public static function actualizar_datos(){
             $persona = new TablaPersona();
