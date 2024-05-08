@@ -1,12 +1,12 @@
 <?php 
     namespace controller;
     use model\TablaCategorias;
-    use config\Rutes;
+    use config\Routes;
     use model\TablaLogin;
     require_once realpath('./vendor/autoload.php');
     session_start();
 
-class Login{
+class login{
     // public static function insertar_datos(){
     //     $persona = new TablaLogin;
     //     echo json_encode($persona->insercion(['nombre'=>'yako','email'=>'yako@gmail.com','pass'=>'test45',]));
@@ -15,9 +15,9 @@ class Login{
     //     $persona = new TablaLogin;
     //     return $persona->consulta()->where('email','axel@gmail.com')->where('pass','test45')->first();
     // }
-        public function inisiarSesion() {
+        public function iniciarSesion() {
             $login = new TablaLogin();
-            $rute = new Rutes();
+            $rute = new Routes();
             $usuarios = $login->consulta()->where('usuario',$_POST['usuario'])->first();
             if ($usuarios) {
                 if ($usuarios['password']==$_POST['password']) {
@@ -30,5 +30,6 @@ class Login{
                 $rute->redirigir('login');
             }
         }
+        // $controlador = new login;
 };
 ?>
